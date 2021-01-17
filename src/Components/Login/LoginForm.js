@@ -4,12 +4,14 @@ import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import { UserContext } from "../../UserContext";
+import Error from "../Helper/Error";
+import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
   const username = useForm(); //da acesso ao value, setValue e onChange
   const password = useForm(); //passar o type pelos parenteses por ex: useForm('email')
 
-  const { userLogin } = React.useContext(UserContext);
+  const { userLogin, error, loading } = React.useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -19,15 +21,30 @@ const LoginForm = () => {
     }
   }
   return (
-    <section>
-      <h1>Login</h1>
-      <form action="" onSubmit={handleSubmit}>
+    <section className="animeLeft">
+      <h1 className="title">Login</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuario" type="text" name="username" {...username} />
         {/* passando o value, setValue e onChange */}
         <Input label="Senha" type="password" name="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
+        {error && <Error error={error} />}
       </form>
-      <Link to="/login/criar">Criar conta</Link>
+
+      <Link className={styles.perdeu} to="/login/perdeu">
+        Perdeu senha
+      </Link>
+      <div className={styles.cadastro}>
+        <h2>Cadastre-se</h2>
+        <p>Ainda nãp possui conta? Cadastre-se agora!</p>
+        <Link className={styles.buttonCriar} to="/login/criar">
+          Criar conta
+        </Link>
+      </div>
     </section>
   );
 };
