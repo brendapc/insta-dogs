@@ -1,6 +1,7 @@
 .wrapper {
   margin-bottom: 1rem;
 }
+
 .input {
   border: 1px solid #eee;
   display: block;
@@ -9,7 +10,7 @@
   padding: 0.8rem;
   border-radius: 0.4rem;
   background: #eee;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 .input:focus,
@@ -30,5 +31,5 @@
 .error {
   color: #f31;
   font-size: 0.875rem;
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
 }
