@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const useFetch = () => {
   const [data, setData] = React.useState(null);
@@ -22,7 +22,7 @@ const useFetch = () => {
       setLoading(false);
       return { response, json };
     }
-  });
+  }, []);
 
   return {
     data,
