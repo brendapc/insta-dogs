@@ -82,6 +82,12 @@ export function PHOTO_GET(id) {
     },
   };
 }
+export function PHOTO_GET_BY_ID(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+   
+  };
+}
 
 export function COMMENT_POST(id, body) {
   return {
