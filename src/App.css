@@ -90,3 +90,13 @@ a {
     transform: initial;
   }
 }
+
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem); /* toda a tela escondendo o footer */
+}
+
+.AppBody{
+  flex: 1;/* expande o máximo que da */
+}
