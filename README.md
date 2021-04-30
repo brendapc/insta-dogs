@@ -1,5 +1,6 @@
 # Application in social media style, where users can publish photos of their dogs
 Developed this project to lean more about react applications
+You can check it out here https://brendapc.github.io/insta-dogs and navigate through the website
 
 Concepts studied:
 - React Context
