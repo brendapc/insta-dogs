@@ -8,6 +8,8 @@ Concepts studied:
 - Dynamic header (changing when user is logged in or logged out)
 - Menu navigation
  
-
-- using create-react-app to init the project
-- using an external backend api for user authentication and login
+<br>
+using create-react-app to init the project
+using an external backend api for user authentication
+<br>
+based on the Origamid Complete React course 
