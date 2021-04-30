@@ -19,7 +19,6 @@ const FeedPhotos = ({
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page, total: 3, user });
       const { json, response } = await request(url, options);
-      console.log(json);
       if (response && response.ok && json.length < total) setInfinite(false);
     }
     fetchPhotos();
