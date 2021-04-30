@@ -20,7 +20,7 @@ function App() {
           <Header />
           <main className="AppBody">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/insta-dogs/" element={<Home />} />
               <Route path="login/*" element={<Login />} />
               <ProtectedRoute path="conta/*" element={<User />} />
               <Route path="foto/:id" element={<Photo />} />
