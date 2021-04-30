@@ -7,6 +7,7 @@ Concepts studied:
 - Infinite Scroll (feed loading pictures by scroll)
 - Dynamic header (changing when user is logged in or logged out)
 - Menu navigation
+- SVG animation while loading 
  
 <br>
 using create-react-app to init the project
